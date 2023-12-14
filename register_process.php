@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-// Connect to MySQL (Replace with your database credentials)
-$mysqli = new mysqli("localhost", "root", "", "ecommerce_db");
+include 'config.php';
 
 // Check connection
 if ($mysqli->connect_error) {

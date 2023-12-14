@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'config.php';
 
 // Ensure the user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -7,8 +8,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Connect to MySQL (Replace with your database credentials)
-include 'config.php';
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -26,14 +25,6 @@ $cart_query = "SELECT p.id, p.name, p.price, c.quantity FROM cart c
                WHERE c.user_id = $user_id";
 $cart_result = $mysqli->query($cart_query);
 
-// Calculate the total price
-$total_price = 0;
-while ($row = $cart_result->fetch_assoc()) {
-    $total_price += $row['price'] * $row['quantity'];
-}
-
-// Process the order (update the database, send confirmation emails, etc.)
-// ...
 
 // Insert order into the orders table with user information and total price
 $order_query = "INSERT INTO orders (user_id, first_name, last_name, address) 
