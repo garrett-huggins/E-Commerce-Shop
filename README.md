@@ -112,6 +112,8 @@ CREATE TABLE orders (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
     address VARCHAR(255),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -124,6 +126,11 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+INSERT INTO products (name, description, price, image_url) VALUES
+('Twilight', '60% Wireless Mechanical Keyboard Bluetooth Dual Mode', 19.99, 'product1.png'),
+('RedDragon Fizz', 'K617 RGB USB Mini Mechanical Gaming Wired Keyboard', 29.99, 'product2.png'),
+('MageGee TS91', 'Mini 60% keyboard with waterproof keycaps', 39.99, 'product3.png');
 ```
 
 ## Setup Instructions
