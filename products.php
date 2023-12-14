@@ -27,7 +27,6 @@ $search_condition = $search_query ? "WHERE name LIKE '%$search_query%'" : '';
 
     <div class="row">
         <?php
-        // Connect to MySQL (Replace with your database credentials)
         session_start();
         include 'config.php';
 

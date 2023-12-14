@@ -1,15 +1,13 @@
 <?php
 session_start();
 include 'header.php';
+include 'config.php';
 
-// Ensure the user is logged in
+// redirect to login page if user is not logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-
-// Connect to MySQL (Replace with your database credentials)
-include 'config.php';
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -68,7 +66,6 @@ while ($row = $cart_result->fetch_assoc()) {
         <!-- Add a form for collecting additional order information -->
         <div class="col-md-6">
             <form action="process_order.php" method="post">
-                <!-- Add input fields for user information -->
                 <div class="form-group">
                     <label for="first_name">First Name:</label>
                     <input type="text" class="form-control" name="first_name" required>
@@ -81,13 +78,6 @@ while ($row = $cart_result->fetch_assoc()) {
                     <label for="address">Address:</label>
                     <input type="text" class="form-control" name="address" required>
                 </div>
-
-                <!-- Add more fields as needed -->
-
-                <!-- Add input fields for additional information (e.g., payment details, etc.) -->
-                <!-- ... -->
-
-                <!-- Add a submit button to process the order -->
                 <button type="submit" class="btn btn-primary mt-3">Place Order</button>
             </form>
         </div>

@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-// Connect to MySQL (Replace with your database credentials)
 include 'config.php';
 
 // Check connection

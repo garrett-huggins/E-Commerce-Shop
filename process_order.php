@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-
 // Check connection
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
@@ -26,7 +25,7 @@ $cart_query = "SELECT p.id, p.name, p.price, c.quantity FROM cart c
 $cart_result = $mysqli->query($cart_query);
 
 
-// Insert order into the orders table with user information and total price
+// Insert order into the orders table with user information
 $order_query = "INSERT INTO orders (user_id, first_name, last_name, address) 
                 VALUES ($user_id, '$first_name', '$last_name', '$address')";
 $mysqli->query($order_query);

@@ -13,8 +13,8 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-// Get user ID from the session (assuming you have a 'users' table with an 'id' column)
-$user_id = $_SESSION['user_id']; // Adjust this based on your session variable
+// Get user id
+$user_id = $_SESSION['user_id'];
 
 // Get product ID and quantity from the request
 $product_id = $_POST['product_id'];

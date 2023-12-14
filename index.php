@@ -1,8 +1,6 @@
 <?php
 session_start();
 include 'header.php';
-
-// Connect to MySQL (Replace with your database credentials)
 include 'config.php';
 
 // Check connection
@@ -99,7 +97,6 @@ $product_result = $mysqli->query($product_query);
         <h2>Contact Us</h2>
         <p>Have questions or need assistance? Reach out to us. We're here to help!</p>
         
-        <!-- Add a simple contact form with fields for name, email, and message -->
         <form action="contact_process.php" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
