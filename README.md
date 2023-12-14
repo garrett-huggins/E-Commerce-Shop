@@ -149,7 +149,8 @@ INSERT INTO products (name, description, price, image_url) VALUES
 3. Configure the Database Connection
 
 - Open the `config.php` file in the project folder.
-- Update the database connection details (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) with your MySQL credentials. Leave this as is if you are using XAMPP or WAMP.
+- Update the database connection details (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) with your MySQL credentials. The default is `ecommerce_db` for the database name.
+  > Note: This only needs to be changed if you want to use a different database name.
 
 4. Run the Application
 
