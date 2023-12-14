@@ -1,0 +1,13 @@
+#footer-container {
+  margin-top: auto;
+  background-color: rgb(213, 213, 213);
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+}
+
+footer > p {
+  margin: 0;
+}
