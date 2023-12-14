@@ -1,8 +1,11 @@
         </div> <!-- Closing container div -->
         <link rel="stylesheet" href="css/footer.css">
         <div id="footer-container">
-            <footer class="container d-flex align-items-center">
+            <footer class="container d-flex align-items-center justify-content-between">
                 <p>&copy; 2023 - Slanted Tech</p>
+                <a target="_blank" class="text-black" href="https://github.com/garrett-huggins/E-Commerce-Shop">
+                    View on GitHub
+                </a>
             </footer>
         </div>
     </div> <!-- Closing wrapper div -->
