@@ -68,6 +68,8 @@ In summary, the challenges were addressed through a combination of careful plann
 | order_id   | INT          | PRIMARY KEY, AUTO_INCREMENT      |
 | user_id    | INT          | NOT NULL, FOREIGN KEY (users.id) |
 | order_date | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP        |
+| first_name | VARCHAR(255) |                                  |
+| last_name  | VARCHAR(255) |                                  |
 | address    | VARCHAR(255) |                                  |
 
 ### Order_Items Table
