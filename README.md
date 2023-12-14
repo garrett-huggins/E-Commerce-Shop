@@ -1,5 +1,7 @@
 # E-Commerce Final Project
 
+<br>
+
 ## Documentation
 
 ### Chosen Platform/CMS:
@@ -26,11 +28,11 @@ The feature that primarily showcases the use of PHP and MySQL is the complete e-
 
 1. **User Authentication:** Ensuring secure user authentication was a challenge. It was overcome by using PHP's password_hash() and password_verify() functions for secure password handling.
 
-2. **Session Management:** Maintaining user sessions across various pages without loss of user information required careful handling of PHP sessions. This was achieved by ensuring that session_start() is called on every page that needs access to session variables, and using one continuous mysqli connection located in `config.php`.
+2. **Session Management:** Maintaining user sessions across various pages without loss of user information was also difficult. This was achieved by ensuring that session_start() is called on every page that needs access to session variables, and using one continuous mysqli connection located in `config.php`.
 
-3. **Database Relationships:** Establishing and managing relationships between different tables (e.g., users, products, orders) required careful consideration of foreign keys. Using MySQL foreign keys helped maintain data integrity.
+3. **Database Relationships:** Establishing and managing relationships between different tables (e.g., users, products, orders) required careful consideration of the database schemas and table relations. Using MySQL foreign keys helped maintain data integrity.
 
-In summary, the challenges were addressed through a combination of careful planning, leveraging built-in PHP and MySQL functionalities, and utilizing Bootstrap for a responsive and visually appealing design. Regular testing and debugging were integral to the development process.
+<br>
 
 ## Database Schema
 
@@ -134,6 +136,8 @@ INSERT INTO products (name, description, price, image_url) VALUES
 ('RedDragon Fizz', 'K617 RGB USB Mini Mechanical Gaming Wired Keyboard', 29.99, 'product2.png'),
 ('MageGee TS91', 'Mini 60% keyboard with waterproof keycaps', 39.99, 'product3.png');
 ```
+
+<br>
 
 ## Setup Instructions
 
